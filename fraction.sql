@@ -6,7 +6,7 @@
 -- (c) 2015 Matthieu Peeters. Feel free to read, copy, change, or reuse in any way under the terms of the GPL. 
 
 
--- Note that the still limited precision
+-- Note that the still limited precision might result in problems when multiplying a lot of fractions. 
 create type fraction as (n bigint, d bigint);
 
 
