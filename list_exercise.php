@@ -76,7 +76,7 @@ print_r(my_reverse($a2));
 function find_first_match(array $a, array $b) {
   $i = 0;
   $j = 0;
-  while($j < count($a) && $j < count($b) && $a[$i] != $b[$j]) { // Note that the check whether $i and $j are in range...
+  while($i < count($a) && $j < count($b) && $a[$i] != $b[$j]) { // Note that the check whether $i and $j are in range...
     // ...has to come before whe use $a[$i] or $b[$j]. 
     // Also note that when we check something in the condition of a while-statement, it is true in the whole body,
     // unless the checked values are changed. 
@@ -86,7 +86,7 @@ function find_first_match(array $a, array $b) {
       $j++;  // The sought value has to be bigger than $b[$j]. 
     }
   }
-  if ($j < count($a) && $j < count($b)) { // This means that the condition on which the while-loop ended was $a[$i] != $b[$j]..
+  if ($i < count($a) && $j < count($b)) { // This means that the condition on which the while-loop ended was $a[$i] != $b[$j]..
     // ..That means that $a[$i] == $b[$i] and we have found our equal value. We don't check whether $a[$i] == $b[$j] because..
     // ..if $i >= count($a) or $j >= count($b) we would try to address values that are not part of the array. Resulting in..
     // ..unpredictable behaviour.
