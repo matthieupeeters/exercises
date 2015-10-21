@@ -91,7 +91,7 @@ function find_first_match(array $a, array $b) {
     // ..if $i >= count($a) or $j >= count($b) we would try to address values that are not part of the array. Resulting in..
     // ..unpredictable behaviour.
     return $a[$i];
-  } else {
+  } else { // This means that $i >= count($a) or $j >= count($b), so we reached the end of an array without finding a match.
     throw new Exception('Value not found.');    
   }
 }
