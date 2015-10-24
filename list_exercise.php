@@ -18,7 +18,19 @@ array(
 1066,
 1066,
 1087,
-1100);
+1100,
+1135,
+1141,
+1154,
+1170,
+1189,
+1199,
+1216,
+1272,
+1307,
+1327,
+1377,
+);
 
 $a2 =
 array(
@@ -36,7 +48,14 @@ array(
 1066,
 1108,
 1137,
-1180);
+1180,
+1223,
+1226,
+1270,
+1285,
+1314,
+1316,
+1322);
 
 // Calculates the highest value in an array containing only positive numbers
 function my_max(array $a) {
