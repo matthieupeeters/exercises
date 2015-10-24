@@ -2,6 +2,8 @@
 // Given two sorted lists of numbers:
 $a1 = 
 array(
+871,
+899,
 924,
 939,
 946,
