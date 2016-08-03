@@ -126,11 +126,60 @@ echo find_first_match($a1, $a2);
 // in a way that results into a sorted array containing all elements of the original two lists.
 
 
-function my_merge(array $a, array $b) {
+function my_merge(array $a, array $b)
+    // Solution while destroying the argument arrays.
+{
+    
   $rv = array();
-  // ....
+  // Sum the number of elements in both arrays.
+  while(!empty($b) and !empty($a))
+  {
+    if($a[0] <= $b[0]) {
+      $rv[] = array_shift($a);
+    } else {
+      $rv[] = array_shift($b);
+    }
+  }
 
-  return $rv;
+  while(!empty($b)) 
+  {
+    $rv[] = array_shift($b);
+  }
+
+  while(!empty($a)) 
+  {
+    $rv[] = array_shift($a);
+  }
+  return $rv;   
+}
+
+
+function my_merge_ix(array $a, array $b)
+    // Solution with indexed arrays instead of just taking the first elements.
+{
+  $rv = array();
+  // Sum the number of elements in both arrays.
+  $i = 0; $j = 0;
+  $c = count($a); $d = count($b);
+  while($i < $c and $j < $d)
+  {
+    if($a[$i] <= $b[$j]) {
+        $rv[] = $a[$i++];
+    } else {
+        $rv[] = $b[$j++];
+    }
+  }
+
+  while($j < $d) 
+  {
+      $rv[] = $b[$j++];
+  }
+
+  while($i < $c) 
+  {
+    $rv[] = $a[$i++];
+  }
+  return $rv;   
 }
 
 
