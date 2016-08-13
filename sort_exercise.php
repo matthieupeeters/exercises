@@ -64,6 +64,8 @@ $a = array(
 // If the array has an odd number of elements, make the first half one 
 // element larger than the second. 
 
+
+
 // If the array has less than two elements, put all elements in the first
 // half and leave the second half empty. 
 
