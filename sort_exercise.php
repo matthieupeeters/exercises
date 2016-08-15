@@ -69,4 +69,18 @@ $a = array(
 // If the array has less than two elements, put all elements in the first
 // half and leave the second half empty. 
 
+// The solution has to be a function.
+// This template can be used:
 
+function halve(array $a) {
+   $h1 = array();
+   $h2 = array();
+   ....
+   
+  print_r($h1);   
+  print_r($h2);   
+   
+}
+
+
+halve($a);
